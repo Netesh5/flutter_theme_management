@@ -24,6 +24,8 @@ class customTheme with ChangeNotifier {
           headline6: TextStyle(color: Colors.black),
           bodyText1: TextStyle(color: Colors.black),
           bodyText2: TextStyle(color: Colors.black),
+          subtitle1: TextStyle(color: Colors.black),
+          subtitle2: TextStyle(color: Colors.black),
         ));
   }
 
@@ -40,6 +42,8 @@ class customTheme with ChangeNotifier {
         headline6: TextStyle(color: Colors.white),
         bodyText1: TextStyle(color: Colors.white),
         bodyText2: TextStyle(color: Colors.white),
+        subtitle1: TextStyle(color: Colors.black),
+        subtitle2: TextStyle(color: Colors.black),
       ),
     );
   }

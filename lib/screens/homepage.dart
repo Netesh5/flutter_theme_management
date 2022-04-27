@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_management/themes/themes.dart';
+import 'package:theme_management/widgets/drawer.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: drawer(context),
         appBar: AppBar(
           backgroundColor: Theme.of(context).backgroundColor,
           iconTheme: Theme.of(context).iconTheme,
