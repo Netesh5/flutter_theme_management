@@ -10,14 +10,15 @@ void main() {
 class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<customTheme>(
+    return ChangeNotifierProvider(
       create: (context) => customTheme(),
-      builder: (context, _) => MaterialApp(
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        themeMode: customTheme.currentTheme,
+        themeMode: Provider.of<customTheme>(context)
+            .currentTheme, //as whole UI need to be change so i am using Provider.of<T>(context)
         theme: customTheme.lightTheme,
         darkTheme: customTheme.darkTheme,
-        home: const Homepage(),
+        home: Homepage(),
       ),
     );
   }

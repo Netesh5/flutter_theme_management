@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class customTheme with ChangeNotifier {
-  static bool _isDarkThemeEnable = true;
-  static ThemeMode get currentTheme =>
-      _isDarkThemeEnable ? ThemeMode.dark : ThemeMode.light;
+  static bool isDarkThemeEnable = true;
+  ThemeMode get currentTheme =>
+      isDarkThemeEnable ? ThemeMode.dark : ThemeMode.light;
 
   void toogleTheme() {
-    _isDarkThemeEnable =
-        !_isDarkThemeEnable; // to make false to Dark theme as btn is pressed
+    isDarkThemeEnable =
+        !isDarkThemeEnable; // to make false to Dark theme as btn is pressed
     notifyListeners();
   }
 
@@ -17,6 +17,7 @@ class customTheme with ChangeNotifier {
         backgroundColor: Colors.white,
         scaffoldBackgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
+        fontFamily: "ubuntu",
         textTheme: const TextTheme(
           headline1: TextStyle(color: Colors.black),
           headline2: TextStyle(color: Colors.black),
@@ -32,6 +33,7 @@ class customTheme with ChangeNotifier {
       backgroundColor: Colors.black,
       scaffoldBackgroundColor: Colors.grey,
       iconTheme: const IconThemeData(color: Colors.white),
+      fontFamily: "ubuntu",
       textTheme: const TextTheme(
         headline1: TextStyle(color: Colors.white),
         headline2: TextStyle(color: Colors.white),
