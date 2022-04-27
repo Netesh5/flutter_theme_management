@@ -29,7 +29,10 @@ class _HomepageState extends State<Homepage> {
           titleTextStyle: Theme.of(context).textTheme.headline6,
         ),
         body: const Center(
-          child: Text("Theme Demo"),
+          child: Text(
+            "Theme Demo",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
+          ),
         ));
   }
 }
